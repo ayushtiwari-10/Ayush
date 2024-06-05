@@ -317,22 +317,39 @@ span {
 }
 
 .aboutme {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.aboutme-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--second-bg-color);
+    flex-wrap: wrap;
+}
+
+.heading {
+    width: 100%;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.heading span {
+    color: var(--main-color); /* Example highlight color */
 }
 
 .about-img {
     width: 35vw;
     border-radius: 50%;
+    text-align: center;
 }
 
 .about-img img {
-    position: relative;
-    top: 3rem;
-    width: 32vw;
+    width: 100%;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -345,23 +362,21 @@ span {
         0 0 100px var(--main-color);
 }
 
-.aboutme-content h2 {
+.aboutme-content {
+    flex: 1;
     text-align: left;
-    line-height: 1.2;
-    color: white;
-    margin: 2rem;
 }
 
 .aboutme-content h3 {
     font-size: 2.6rem;
     color: white;
-    margin: 2rem;
+    margin: 2rem 0;
     text-decoration: underline;
 }
 
 .aboutme-content p {
     font-size: 2rem;
-    margin: 2rem;
+    margin: 0 2rem 2rem;
     color: white;
 }
 
@@ -907,18 +922,70 @@ span {
 
     .timeline-items::before {
         left: 7px;
+        left: 50%;
+    }
+    @media (max-width: 768px) {
+    .aboutme {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
+    .about-img {
+        width: 70vw;
+    }
+
+    .about-img img {
+        width: 65vw;
+        top: 2rem;
+    }
+   
+    .aboutme-content h2, .aboutme-content h3, .aboutme-content p {
+        margin: 1rem;
+    }
+
+    .aboutme-content h3 {
+        font-size: 2rem;
+    }
+
+    .aboutme-content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-img {
+        width: 90vw;
+    }
+
+    .about-img img {
+        width: 85vw;
+        top: 1rem;
+    }
+
+    .aboutme-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .aboutme-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .aboutme-content p {
+        font-size: 1.2rem;
+    }
+}
     .timeline-item:nth-child(odd) {
         padding-right: 0;
         text-align: left;
     }
     .timeline-item:nth-child(odd) ,
     .timeline-item:nth-child(even){
-        padding-left: 37px;
+        padding-left: 5px;
     }
     .timeline-dot{
-        left: 0;
+        left: 50%;
+        margin-top: -20px;
     }
     .services{
         padding-bottom: 7rem ;
