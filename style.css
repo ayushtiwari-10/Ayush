@@ -600,7 +600,7 @@ span {
 }
 
 .project-box {
-    height: 350px;
+    height: 275px;
     width: 400px;
     background: var(--second-bg-color);
     /* padding: 30px 0px; */
